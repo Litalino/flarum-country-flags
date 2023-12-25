@@ -12,6 +12,8 @@ PLugin Clone Co-development: Litalino/flarum-country-flags
 
 ![cc](https://user-images.githubusercontent.com/79002016/151670456-09b24cfd-c568-4f63-ad61-555e2b6e8cad.png)
 
+![country-flags](https://github.com/Litalino/flarum-country-flags/assets/99712477/6752636f-14b4-4e7e-990e-e6cf0cf3a027)
+
 
 ![flag](https://i.ibb.co/PWy3gGy/sdf.png)
 

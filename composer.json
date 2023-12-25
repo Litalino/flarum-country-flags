@@ -1,0 +1,92 @@
+{
+    "name": "litalino/flarum-country-flags",
+    "description": "Add country flags attribute to Flarum Users",
+    "keywords": [
+        "flarum",
+        "flarum extension",
+        "country flag",
+        "flag",
+        "country"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "replace": {
+        "justoverclock/country-flags": "*"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "litalino",
+            "email": "info@khatvongsong.vn",
+            "role": "Co-development"
+        },
+        {
+            "name": "Marco Colia",
+            "email": "info@flarum.it",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/litalino/flarum-country-flags/issues",
+        "source": "https://github.com/litalino/flarum-country-flags",
+        "forum": "https://discuss.flarum.org/d/33616-bbcode-more-bbcode"
+    },
+    "autoload": {
+        "psr-4": {
+            "Litalino\\CountryFlags\\": "src/"
+        }
+    },
+    "homepage": "https://khatvongsong.vn",
+    "extra": {
+        "flarum-extension": {
+            "title": "Country Flags",
+            "category": "features",
+            "icon": {
+                "name": "far fa-flag",
+                "backgroundColor": "red",
+                "color": "white"
+            }
+        },
+        "flarum-cli": {
+          "modules": {
+            "admin": true,
+            "forum": true,
+            "js": true,
+            "jsCommon": false,
+            "css": true,
+            "locale": true,
+            "gitConf": true,
+            "githubActions": true,
+            "prettier": true,
+            "typescript": false,
+            "bundlewatch": false,
+            "backendTesting": false,
+            "editorConfig": true,
+            "styleci": true
+          }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../*/*"
+        }
+    ],
+    "require-dev": {
+      "flarum/phpstan": "*"
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,14 @@
+justoverclock-country-flags:
+  admin:
+    countryColumn: Quốc gia
+    showFlagsOnPosts: Hiển thị cờ trên bài viết
+    showFlagsOnPosts_text: Hiển thị cờ (Văn bản) trên bài viết
+    set_on_registration_label: Cho phép cài đặt quốc gia khi đăng ký
+    required_label: Quốc gia nhập bắt buộc
+    required_help: Bạn cần bật tùy chọn Đặt theo quốc gia để tùy chọn này hoạt động
+  forum:
+    inputCountryCode: Mã quốc gia
+    saveButton: Lưu
+    clickToSelectCountry: Chọn quốc gia của bạn
+    countrySaved: Quốc gia đã được lưu thành công!
+    field_placeholder: Xác nhận cờ quốc gia

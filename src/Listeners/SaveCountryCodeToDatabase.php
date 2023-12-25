@@ -36,7 +36,8 @@ class SaveCountryCodeToDatabase
                 //$actor->assertPermission($canEdit);
             }
             //$user->countryCode = $attributes['countryCode'];
-            $user->countryCode = $attributes['countryCode'] === '' ? null : $attributes['countryCode'];
+            //$user->countryCode = $attributes['countryCode'] === '' ? 'null' : $attributes['countryCode'];
+            $user->countryCode = $attributes['countryCode'] === '' ? '' : $attributes['countryCode'];
             //$user->save();
         }
     }

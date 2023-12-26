@@ -4,24 +4,24 @@ import UserListPage from 'flarum/admin/components/UserListPage';
 
 app.initializers.add('litalino/flarum-country-flags', () => {
   app.extensionData
-    .for('justoverclock-country-flags')
+    .for('litalino-flarum-country-flags')
     .registerSetting({
-      setting: 'justoverclock-country-flags.showFlagsOnPosts',
+      setting: 'litalino-flarum-country-flags.showFlagsOnPosts',
       label: app.translator.trans('justoverclock-country-flags.admin.showFlagsOnPosts'),
       type: 'boolean',
     })
     .registerSetting({
-      setting: 'justoverclock-country-flags.showFlagsOnPosts_text',
+      setting: 'litalino-flarum-country-flags.showFlagsOnPosts_text',
       label: app.translator.trans('justoverclock-country-flags.admin.showFlagsOnPosts_text'),
       type: 'boolean',
     })
    .registerSetting({
-      setting: 'justoverclock-country-flags.set_on_registration',
+      setting: 'litalino-flarum-country-flags.set_on_registration',
       type: 'boolean',
       label: app.translator.trans('justoverclock-country-flags.admin.set_on_registration_label'),
    })
     .registerSetting({
-      setting: 'justoverclock-country-flags.required',
+      setting: 'litalino-flarum-country-flags.required',
       type: 'boolean',
       label: app.translator.trans('justoverclock-country-flags.admin.required_label'),
       help: app.translator.trans('justoverclock-country-flags.admin.required_help'),

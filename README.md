@@ -11,7 +11,7 @@ PLugin Developer: justoverclock/country-flags
 PLugin Clone Co-development: Litalino/flarum-country-flags
 
 <p align="center">
- <img src="[http://some_place.com/image.png](https://github.com/Litalino/flarum-country-flags/assets/99712477/6752636f-14b4-4e7e-990e-e6cf0cf3a027)" />
+ <img src="https://github.com/Litalino/flarum-country-flags/assets/99712477/6752636f-14b4-4e7e-990e-e6cf0cf3a027" />
 </p>
   
 ![country-flags](https://github.com/Litalino/flarum-country-flags/assets/99712477/6752636f-14b4-4e7e-990e-e6cf0cf3a027)

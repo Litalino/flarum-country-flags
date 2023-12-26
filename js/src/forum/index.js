@@ -51,8 +51,8 @@ app.initializers.add('litalino/user-country-info', () => {
     }
   });
   extend(CommentPost.prototype, 'headerItems', function (items) {
-    if (app.forum.attribute('litalino-flarum-country-flags.showFlagsOnPosts') === true) {
-      if (app.forum.attribute('litalino-flarum-country-flags.showFlagsOnPosts_text') === true) {
+    if (app.forum.attribute('justoverclock-country-flags.showFlagsOnPosts') === true) {
+      if (app.forum.attribute('justoverclock-country-flags.showFlagsOnPosts_text') === true) {
 
         const user = this.attrs.post.user();
         if (!user) return;
@@ -88,7 +88,7 @@ app.initializers.add('litalino/user-country-info', () => {
   /////////////////////////////////////////////////////
   extend(SignUpModal.prototype, 'oninit', function () {
     //console.log("oninit");
-    if (app.forum.attribute('litalino-flarum-country-flags.setCountryFlagsOnRegistration')) {
+    if (app.forum.attribute('justoverclock-country-flags.setCountryFlagsOnRegistration')) {
       //this.country = Stream(this.attrs.country || "");
       //this.countryCode = Stream(this.attrs.user.countryCode() || "");
       //this.countryCode = Stream(this.attrs.countryCode() || "");
@@ -98,7 +98,7 @@ app.initializers.add('litalino/user-country-info', () => {
 
   extend(SignUpModal.prototype, 'fields', function (items) {
     //console.log("fields");
-    if (app.forum.attribute('litalino-flarum-country-flags.setCountryFlagsOnRegistration')) {
+    if (app.forum.attribute('justoverclock-country-flags.setCountryFlagsOnRegistration')) {
       /*items.add(
         "countryCode",
         <div className="Form-group">
@@ -401,7 +401,7 @@ app.initializers.add('litalino/user-country-info', () => {
 
   extend(SignUpModal.prototype, 'submitData', function (data) {
     //console.log("submitData");
-    if (app.forum.attribute('litalino-flarum-country-flags.setCountryFlagsOnRegistration')) {
+    if (app.forum.attribute('justoverclock-country-flags.setCountryFlagsOnRegistration')) {
       //data.country = this.country();
       //const user = this.attrs.user;
       //if (this.countryCode() !== user.countryCode()) {

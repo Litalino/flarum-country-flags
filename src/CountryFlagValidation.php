@@ -47,7 +47,8 @@ class CountryFlagValidation
         //    'countryCode' => 'required', //, 'integer'
         //];
         $rules['countryCode'] = [
-            'countryCode' => ['required']
+            //'countryCode' => ['required']
+            'countryCode' => [$set_isRequired]
             //$set_isRequired
         ];
 

@@ -11,7 +11,7 @@ class SaveCountryCodeToDatabase
     {
         //Allow admins to create users from the admin panel
         if ($event->actor->isAdmin()) {
-            return;
+            //return;
         }
 
         $user = $event->user;

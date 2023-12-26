@@ -12,8 +12,8 @@
 namespace Litalino\CountryFlags;
 
 use Flarum\Settings\Event\Serializing;
-use Justoverclock\CountryFlags\Listeners\SaveCountryCodeToDatabase;
-use Justoverclock\CountryFlags\Listeners\AddCountryFlagAttributes;
+use Litalino\CountryFlags\Listeners\SaveCountryCodeToDatabase;
+use Litalino\CountryFlags\Listeners\AddCountryFlagAttributes;
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\Extend;
 use Flarum\User\Event\Saving;

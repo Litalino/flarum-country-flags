@@ -20,9 +20,6 @@ PLugin Clone Co-development: Litalino/flarum-country-flags
 
 ![flag](https://i.ibb.co/xDDNzBv/2222.png)
 
-![edituser](https://user-images.githubusercontent.com/79002016/151670426-fde518b6-d999-4207-89fe-086dac103606.png)
-
-
 ## Installation
 
 Install with composer:

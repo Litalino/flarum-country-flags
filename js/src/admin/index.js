@@ -15,11 +15,11 @@ app.initializers.add('litalino/flarum-country-flags', () => {
       label: app.translator.trans('justoverclock-country-flags.admin.showFlagsOnPosts_text'),
       type: 'boolean',
     })
-   .registerSetting({
+    .registerSetting({
       setting: 'litalino-flarum-country-flags.set_on_registration',
       type: 'boolean',
       label: app.translator.trans('justoverclock-country-flags.admin.set_on_registration_label'),
-   })
+    })
     .registerSetting({
       setting: 'litalino-flarum-country-flags.required',
       type: 'boolean',

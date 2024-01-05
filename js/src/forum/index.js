@@ -24,6 +24,8 @@ app.initializers.add('litalino/user-country-info', () => {
     //console.log(countryFlag);
     if (countryFlag === '') return;
     if (countryFlag === undefined) return;
+    //if (countryFlag === 'Clicca per scegliere la tua nazionalità') return;
+    //if (countryFlag === 'Select your country') return;
     let flagImage = 'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + countryFlag + '.svg';
 
     items.add(
@@ -61,6 +63,8 @@ app.initializers.add('litalino/user-country-info', () => {
         let countryFlag = user.countryCode();
         if (countryFlag === '') return;
         if (countryFlag === undefined) return;
+        //if (countryFlag === 'Clicca per scegliere la tua nazionalità') return;
+        //if (countryFlag === 'Select your country') return;
         if (!user) return;
         items.add(
           'country-flag',

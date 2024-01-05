@@ -1633,7 +1633,7 @@ flarum-tsconfig@^1.0.2:
     "@types/throttle-debounce" "^2.1.0"
     dayjs "^1.10.4"
 
-flarum-webpack-config@^2.0.0:
+flarum-webpack-config@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/flarum-webpack-config/-/flarum-webpack-config-2.0.2.tgz#efa67268904390a1e7aee55e1ac5a794a57e0855"
   integrity sha512-kUCaCsXL8s/OhSWleWtIppRXDNBzAf8/ewCx9OIF0zNO0hlvY5T1N0EO0AnyUJbsp5nOCdzsTo9rTRRsbKT+IA==

@@ -21,7 +21,9 @@ app.initializers.add('litalino/user-country-info', () => {
   extend(UserCard.prototype, 'infoItems', function (items) {
     const user = this.attrs.user;
     let countryFlag = user.countryCode();
+    //console.log(countryFlag);
     if (countryFlag === '') return;
+    if (countryFlag === undefined) return;
     let flagImage = 'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + countryFlag + '.svg';
 
     items.add(
@@ -58,6 +60,7 @@ app.initializers.add('litalino/user-country-info', () => {
         if (!user) return;
         let countryFlag = user.countryCode();
         if (countryFlag === '') return;
+        if (countryFlag === undefined) return;
         if (!user) return;
         items.add(
           'country-flag',
@@ -73,6 +76,7 @@ app.initializers.add('litalino/user-country-info', () => {
         let countryFlag = user.countryCode();
         let flagImage = 'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + countryFlag + '.svg';
         if (countryFlag === '') return;
+        if (countryFlag === undefined) return;
         if (!user) return;
         items.add(
           'country-flag',

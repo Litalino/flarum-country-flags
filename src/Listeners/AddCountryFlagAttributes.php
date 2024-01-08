@@ -11,10 +11,10 @@ class AddCountryFlagAttributes
     {
         $actor = $serializer->getActor();
 
-        if ($actor->can('edit', $user)) {
+        //if ($actor->can('edit', $user)) {
             $attributes['countryCode'] = $user->countryCode;
             //$attributes['canEditOwnBirthday'] = $actor->id === $user->id && $actor->can('editOwnBirthday', $user);
-        }
+        //}
 
         //$attributes['countryCode'] = $user->countryCode;
 

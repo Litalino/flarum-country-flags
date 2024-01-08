@@ -20,6 +20,9 @@ app.initializers.add('litalino/user-country-info', () => {
   });
   extend(UserCard.prototype, 'infoItems', function (items) {
     const user = this.attrs.user;
+    //const user = app.session.user.countryCode();
+    //const user = this.attrs.user.countryCode();
+    //console.log(user);
     let countryFlag = user.countryCode();
     //console.log(countryFlag);
     if (countryFlag === '') return;

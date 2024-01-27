@@ -23,33 +23,20 @@ class CountryFlagValidation
         protected TranslatorInterface $translator,
         protected SettingsRepositoryInterface $settings
     ) {
+
     }
 
     public function __invoke(UserValidator $flarumValidator, Validator $validator): void
     {
         $rules = $validator->getRules();
-
+        
         $isRequired = $this->settings->get('justoverclock-country-flags.required')
             && $this->settings->get('justoverclock-country-flags.set_on_registration');
-
-        if ($isRequired  && ! $flarumValidator->getUser()) {
-            $set_isRequired = 'required'; //|not_in:0
-        } else {
-            $set_isRequired = 'nullable';
-        }
-
-        //$rules['countryCode'] = [
-            //'nullable',
-            //Rule::requiredIf($isRequired && ! $flarumValidator->getUser()),
-            //$set_isRequired
-        //];
-        //$rules = [
-        //    'countryCode' => 'required', //, 'integer'
-        //];
+        
         $rules['countryCode'] = [
-            //'countryCode' => ['required']
-            'countryCode' => [$set_isRequired]
-            //$set_isRequired
+            //Rule::requiredIf($isRequired && ! $flarumValidator->getUser()),
+            'sometimes',
+            Rule::when($isRequired && ! $flarumValidator->getUser(), 'required', 'nullable'),
         ];
 
         $validator->setRules($rules);

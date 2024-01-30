@@ -15,4 +15,4 @@ justoverclock-country-flags:
     countrySaved: Country successfully saved!
     field_placeholder: Confirm Country Flags
     binding_country: We discovered that you have not bound your whereabouts. Please link your country first. You can only post and leave messages after linking your country.
-    binding_country_click: CLick Now
+    binding_country_click: Click Now

@@ -7,6 +7,7 @@ use Illuminate\Support\Arr;
 
 class SaveCountryCodeToDatabase
 {
+
     public function handle(Saving $event): void
     {
         //Allow admins to create users from the admin panel

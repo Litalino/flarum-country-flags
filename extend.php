@@ -31,7 +31,8 @@ return [
     (new Extend\Settings())
          ->serializeToForum('justoverclock-country-flags.showFlagsOnPosts', 'justoverclock-country-flags.showFlagsOnPosts', 'boolval', false)
          ->serializeToForum('justoverclock-country-flags.showFlagsOnPosts_text', 'justoverclock-country-flags.showFlagsOnPosts_text', 'boolval', false)
-         ->serializeToForum('justoverclock-country-flags.setCountryFlagsOnRegistration', 'justoverclock-country-flags.set_on_registration', 'boolval'),
+         ->serializeToForum('justoverclock-country-flags.setCountryFlagsOnRegistration', 'justoverclock-country-flags.set_on_registration', 'boolval')
+         ->serializeToForum('justoverclock-country-flags.setCountryBindLogin', 'justoverclock-country-flags.bind_login', 'boolval'),
 
     (new Extend\Event())
         ->listen(Saving::class, SaveCountryCodeToDatabase::class),
@@ -39,9 +40,7 @@ return [
     (new Extend\ApiSerializer(UserSerializer::class))
         ->attributes(AddCountryFlagAttributes::class),
 
-    //(new Extend\Event)
-    //    ->listen(Saving::class, ValidateCountryFlag::class),
-
     (new Extend\Validator(UserValidator::class))
         ->configure(CountryFlagValidation::class),
+
 ];

@@ -6,9 +6,13 @@ justoverclock-country-flags:
     set_on_registration_label: Cho phép cài đặt quốc gia khi đăng ký
     required_label: Quốc gia nhập bắt buộc
     required_help: Bạn cần bật tùy chọn Đặt theo quốc gia để tùy chọn này hoạt động
+    bind_label: Ràng buộc Quốc gia nhập bắt buộc
+    bind_help: Buộc quốc gia vào tài khoản chưa đăng ký quốc gia sau khi đăng nhập
   forum:
     inputCountryCode: Mã quốc gia
     saveButton: Lưu
     clickToSelectCountry: Chọn quốc gia của bạn
     countrySaved: Quốc gia đã được lưu thành công!
     field_placeholder: Xác nhận cờ quốc gia
+    binding_country: Chúng tôi phát hiện ra rằng bạn chưa ràng buộc nơi ở của mình. Vui lòng liên kết quốc gia của bạn trước. Bạn chỉ có thể đăng và để lại tin nhắn sau khi liên kết quốc gia của bạn.
+    binding_country_click: Bấm vào ngay

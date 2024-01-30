@@ -1,5 +1,5 @@
 import app from 'flarum/forum/app';
-import {extend} from 'flarum/common/extend';
+import {extend, override} from 'flarum/common/extend';
 import SettingsPage from 'flarum/forum/components/SettingsPage';
 import User from 'flarum/common/models/User';
 import Model from 'flarum/common/Model';
@@ -12,9 +12,30 @@ import CommentPost from 'flarum/forum/components/CommentPost';
 import Stream from "flarum/common/utils/Stream";
 import SignUpModal from "flarum/forum/components/SignUpModal";
 
+import WelcomeHero from 'flarum/forum/components/WelcomeHero';
+
 app.initializers.add('litalino/user-country-info', () => {
   User.prototype.countryCode = Model.attribute('countryCode');
 
+  //Binding Login
+  override(WelcomeHero.prototype, 'view', function (original) {
+    if (app.session.user && app.session.user.isEmailConfirmed()) {
+      if (app.session.user.data.attributes.countryCode != null && app.session.user.data.attributes.countryCode != '') {
+        return original();
+      }
+      if (app.forum.attribute('justoverclock-country-flags.setCountryBindLogin') === true) {
+        return m("div.Alert", [
+          m("div.container", [
+            m("span.alert-danger", app.translator.trans('justoverclock-country-flags.forum.binding_country')),
+            m("a.bind.Button--primary[href='/settings']", app.translator.trans('justoverclock-country-flags.forum.binding_country_click'))
+          ])
+        ]);
+      }
+    }
+    return original();
+  });
+
+  //Info Items
   extend(SettingsPage.prototype, 'settingsItems', function (items) {
     items.add('countryFlag', <AddCountryCodeField/>);
   });
@@ -57,6 +78,8 @@ app.initializers.add('litalino/user-country-info', () => {
       data.countryCode = this.countryCode();
     }
   });
+
+  //Header Items
   extend(CommentPost.prototype, 'headerItems', function (items) {
     if (app.forum.attribute('justoverclock-country-flags.showFlagsOnPosts') === true) {
       if (app.forum.attribute('justoverclock-country-flags.showFlagsOnPosts_text') === true) {

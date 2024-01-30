@@ -29,7 +29,7 @@ class CountryFlagValidation
     public function __invoke(UserValidator $flarumValidator, Validator $validator): void
     {
         $rules = $validator->getRules();
-        
+
         $isRequired = $this->settings->get('justoverclock-country-flags.required')
             && $this->settings->get('justoverclock-country-flags.set_on_registration');
         

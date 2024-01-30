@@ -26,6 +26,12 @@ app.initializers.add('litalino/flarum-country-flags', () => {
       label: app.translator.trans('justoverclock-country-flags.admin.required_label'),
       help: app.translator.trans('justoverclock-country-flags.admin.required_help'),
     })
+    .registerSetting({
+      setting: 'justoverclock-country-flags.bind_login',
+      type: 'boolean',
+      label: app.translator.trans('justoverclock-country-flags.admin.bind_label'),
+      help: app.translator.trans('justoverclock-country-flags.admin.bind_help'),
+    })
   extend(UserListPage.prototype, 'columns', function (items) {
     items.add(
       'country',

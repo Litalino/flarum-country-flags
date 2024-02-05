@@ -124,46 +124,13 @@ app.initializers.add('litalino/user-country-info', () => {
 
   /////////////////////////////////////////////////////
   extend(SignUpModal.prototype, 'oninit', function () {
-    //console.log("oninit");
     if (app.forum.attribute('justoverclock-country-flags.setCountryFlagsOnRegistration')) {
-      //this.country = Stream(this.attrs.country || "");
-      //this.countryCode = Stream(this.attrs.user.countryCode() || "");
-      //this.countryCode = Stream(this.attrs.countryCode() || "");
       this.countryCode = Stream("");
     }
   });
 
   extend(SignUpModal.prototype, 'fields', function (items) {
-    //console.log("fields");
     if (app.forum.attribute('justoverclock-country-flags.setCountryFlagsOnRegistration')) {
-      /*items.add(
-        "countryCode",
-        <div className="Form-group">
-          <input
-            className="FormControl country"
-            name="countryCode"
-            type="select"
-            bidi={this.countryCode}
-            disabled={this.loading}
-            placeholder="Country"
-            //onfocus={(e) => {
-            //  e.target.type = "date";
-            //}}
-          />
-        </div>,
-        1
-      );*/
-      /*items.add(
-        'countryCode',
-        <div className="Form-group">
-          <input className="FormControl" name="countryCode" bidi={this.countryCode}/>
-        </div>,
-        1
-      );*/
-      // value="0" selected="selected"
-      //if (this.attrs.token) {
-      //  return;
-      //}
       items.add(
         "countryCode",
         <div className="Form-group">
@@ -437,24 +404,10 @@ app.initializers.add('litalino/user-country-info', () => {
   });
 
   extend(SignUpModal.prototype, 'submitData', function (data) {
-    //console.log("submitData");
     if (app.forum.attribute('justoverclock-country-flags.setCountryFlagsOnRegistration')) {
-      //data.country = this.country();
-      //const user = this.attrs.user;
-      //if (this.countryCode() !== user.countryCode()) {
-        //data.countryCode = this.countryCode();
-      //}
-      //if (!this.attrs.token) {
-        //const inputValue = document.getElementById('countryCode');
-        const e = document.getElementById("countryCode");
-        var value = e.options[e.selectedIndex].value; // Get value
-        //var text = e.options[e.selectedIndex].text;  // Get value text
-        //console.log(value);
-
+        const inputValue = document.querySelector('.FormControl.countryCode')
+        var value = inputValue.options[inputValue.selectedIndex].value; // Get value
         data.countryCode =   value;
-
-      //}
-
     }
   });
 

@@ -48,6 +48,7 @@ app.initializers.add('litalino/user-country-info', () => {
     //console.log(countryFlag);
     if (countryFlag === '') return;
     if (countryFlag === undefined) return;
+    if (countryFlag === null ) return;
     //if (countryFlag === 'Clicca per scegliere la tua nazionalità') return;
     //if (countryFlag === 'Select your country') return;
     let flagImage = 'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + countryFlag + '.svg';
@@ -89,6 +90,7 @@ app.initializers.add('litalino/user-country-info', () => {
         let countryFlag = user.countryCode();
         if (countryFlag === '') return;
         if (countryFlag === undefined) return;
+        if (countryFlag === null ) return;
         //if (countryFlag === 'Clicca per scegliere la tua nazionalità') return;
         //if (countryFlag === 'Select your country') return;
         if (!user) return;
@@ -107,6 +109,7 @@ app.initializers.add('litalino/user-country-info', () => {
         let flagImage = 'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + countryFlag + '.svg';
         if (countryFlag === '') return;
         if (countryFlag === undefined) return;
+        if (countryFlag === null ) return;
         if (!user) return;
         items.add(
           'country-flag',

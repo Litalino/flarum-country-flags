@@ -27,7 +27,7 @@ app.initializers.add('litalino/user-country-info', () => {
         return m("div.Alert", [
           m("div.container", [
             m("span.alert-danger", app.translator.trans('justoverclock-country-flags.forum.binding_country')),
-            m("a.bind.Button--primary[href='/settings']", app.translator.trans('justoverclock-country-flags.forum.binding_country_click'))
+            m("a.bind.Button--primary[href="+ app.forum.attribute('baseUrl') +"/settings]", app.translator.trans('justoverclock-country-flags.forum.binding_country_click'))
           ])
         ]);
       }
